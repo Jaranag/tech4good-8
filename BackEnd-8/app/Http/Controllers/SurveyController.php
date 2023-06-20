@@ -27,7 +27,7 @@ class SurveyController extends Controller
             'attribute4' => $request->atribute4
         ]);
 
-        $district->total_average = $id->calculateRateTotal($district);
+        $district->total_average = $district->calculateRateTotal($district);
         $district->save();
 
         return response()->json(['message' => 'survey done!'],201);
