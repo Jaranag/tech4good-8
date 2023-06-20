@@ -18,19 +18,10 @@ use App\Http\Controllers\ReviewController;
 */
 
 Route::get('/district/{id}', [DistrictController::class, 'show']);
+Route::get('/districts', [DistrictController::class, 'showAll']);
 Route::post('/district/{id}/survey', [SurveyController::class, 'create']);
 Route::post('/district/{id}/review', [ReviewController::class, 'create']);
 
 
 
 
-Route::get('/district/{id}/survey', [SurveyController::class, 'create']);
-
-
-
-
-// Atributos barrios: 
-//     1. Conectividad
-//     2. Precios 
-//     3. Zonas verdes 
-//     4. civismo

@@ -12,4 +12,10 @@ class DistrictController extends Controller
         $response = $district;
         return $response;
     }
+
+    public function showAll() {
+        $districts = District::all();
+        $response = $districts;
+        return $response;
+    }
 }
