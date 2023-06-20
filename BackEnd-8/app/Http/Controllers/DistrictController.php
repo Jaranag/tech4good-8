@@ -9,13 +9,11 @@ class DistrictController extends Controller
 {
     public function show($id) {
         $district = District::find($id);
-        $response = $district;
-        return $response;
+        return $district;
     }
 
     public function showAll() {
         $districts = District::all();
-        $response = $districts;
-        return $response;
+        return $districts;
     }
 }
