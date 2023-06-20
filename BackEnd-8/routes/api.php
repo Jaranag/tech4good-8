@@ -18,9 +18,13 @@ use App\Http\Controllers\Survey;
 Route::put('/players/{id}', [UserController::class, 'update'])->name('players.update');
 Route::get('/players/{id}/games', [DiceRollController::class, 'index']);
 
+Route::get('/district/{id}/survey', [SurveyController::class, 'create']);
+
+
+
 
 // Atributos barrios: 
 //     1. Conectividad
 //     2. Precios 
 //     3. Zonas verdes 
-//     4. 
+//     4. civismo

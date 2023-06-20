@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('surveys', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('district_id')->references('id')->on('districts');
+            $table->int('attribute1');
+            $table->int('attribute2');
+            $table->int('attribute3');
+            $table->int('attribute4');
+
             $table->timestamps();
         });
     }
