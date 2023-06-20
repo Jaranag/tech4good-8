@@ -27,12 +27,6 @@
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <script
-      defer
-      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
-    ></script>
-    <script defer src="js/script.js"></script>
-
     <title>Barcelona Fuera de Ruta</title>
   </head>
 
@@ -47,7 +41,9 @@
 
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">Inicio</a></li>
+          <li>
+            <a class="main-nav-link" href="../pages/index.html">Inicio</a>
+          </li>
           <li>
             <a class="main-nav-link" href="#zones-section">Zonas</a>
           </li>
@@ -72,11 +68,11 @@
               Te ofrecemos diferentes opciones para que puedas descubrir las
               <strong>joyas ocultas</strong> de Barcelona.
             </p>
-            <a href="#cta" class="btn btn--full margin-right-sm"
+            <a href="#zones-section" class="btn btn--full margin-right-sm"
               >Explorar más</a
             >
 
-            <a href="#how" class="btn btn--outline">Saber más &darr;</a>
+            <a href="#cta" class="btn btn--outline">Saber más &darr;</a>
           </div>
           <div class="hero-img-box">
             <picture>
@@ -257,11 +253,7 @@
                 <input type="number" /> -->
               </form>
             </div>
-            <div
-              class="cta-img-box"
-              role="img"
-              aria-label="Woman enjoying food"
-            ></div>
+            <div class="cta-img-box" role="img" aria-label=""></div>
           </div>
         </div>
       </section>
@@ -274,9 +266,13 @@
           FUERA DE RUTA
         </h1>
         <ul class="footer__nav">
-          <li class="main-nav-link footer__item">Inicio</li>
-          <li class="main-nav-link footer__item">Zonas</li>
-          <li class="main-nav-link footer__item">Contacto</li>
+          <a class="main-nav-link footer__item" href="../pages/index.html">
+            Inicio
+          </a>
+          <a class="main-nav-link footer__item" href="#zones-section">
+            Zonas
+          </a>
+          <a class="main-nav-link footer__item" href="#cta">Contacto</a>
         </ul>
 
         <p class="footer__copyright">&copy; Hecho con 💚 por Tech4Good8</p>
