@@ -84,10 +84,9 @@
           <div class="hero-img-box">
             <picture>
               <img
-                id = img-fetch-prueba
+                id="img-fetch-prueba"
                 class="hero-img"
                 alt="Woman enjoying food, meals in storage container, and food bowls on a table"
-               
               />
             </picture>
           </div>
@@ -402,9 +401,15 @@
           FUERA DE RUTA
         </h1>
         <ul class="footer__nav">
-          <li class="main-nav-link footer__item">Inicio</li>
-          <li class="main-nav-link footer__item">Zonas</li>
-          <li class="main-nav-link footer__item">Contacto</li>
+          <a class="main-nav-link footer__item" href="../pages/index.html">
+            Inicio
+          </a>
+          <a class="main-nav-link footer__item" href="../pages/index.html">
+            Zonas
+          </a>
+          <a class="main-nav-link footer__item" href="../pages/index.html"
+            >Contacto</a
+          >
         </ul>
 
         <p class="footer__copyright">&copy; Hecho con 💚 por Tech4Good8</p>
@@ -420,8 +425,8 @@
         let zona = document.querySelector("#nombre-zona");
         zona.textContent = json.data.id;
         //imagen
-        let img = document.querySelector('#img-fetch-prueba')
-        img.src=json.data.avatar;
+        let img = document.querySelector("#img-fetch-prueba");
+        img.src = json.data.avatar;
       }
 
       exampleFetch();

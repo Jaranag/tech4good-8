@@ -284,6 +284,12 @@
         const response = await fetch("https://reqres.in/api/users/2");
         const json = await response.json();
         console.log(json);
+        //seleccionamos con id y añadimos info de data
+        let zona = document.querySelector("#nombre-zona");
+        zona.textContent = json.data.id;
+        //imagen
+        let img = document.querySelector("#img-fetch-prueba");
+        img.src = json.data.avatar;
       }
 
       exampleFetch();
