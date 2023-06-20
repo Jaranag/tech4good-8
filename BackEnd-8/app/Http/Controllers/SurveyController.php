@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Survey extends Controller
+class SurveyController extends Controller
 {
     //
 }
