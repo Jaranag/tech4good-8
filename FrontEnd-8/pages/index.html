@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles/styles-home.css" />
+    <link rel="stylesheet" href="../styles/styles-home.css" />
 
     <script
       type="module"
@@ -26,12 +26,6 @@
       nomodule=""
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
     ></script>
-
-    <script
-      defer
-      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
-    ></script>
-    <script defer src="js/script.js"></script>
 
     <title>Barcelona Fuera de Ruta</title>
   </head>
@@ -47,7 +41,9 @@
 
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">Inicio</a></li>
+          <li>
+            <a class="main-nav-link" href="../pages/index.html">Inicio</a>
+          </li>
           <li>
             <a class="main-nav-link" href="#zones-section">Zonas</a>
           </li>
@@ -72,18 +68,18 @@
               Te ofrecemos diferentes opciones para que puedas descubrir las
               <strong>joyas ocultas</strong> de Barcelona.
             </p>
-            <a href="#cta" class="btn btn--full margin-right-sm"
+            <a href="#zones-section" class="btn btn--full margin-right-sm"
               >Explorar más</a
             >
 
-            <a href="#how" class="btn btn--outline">Saber más &darr;</a>
+            <a href="#cta" class="btn btn--outline">Saber más &darr;</a>
           </div>
           <div class="hero-img-box">
             <picture>
               <img
-                src="./assets/img/hero-image-laberinto.jpg"
+                src="../assets/img/hero-image-laberinto.jpg"
                 class="hero-img"
-                alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+                alt="Lugar atractivo en Barcelona"
               />
             </picture>
           </div>
@@ -139,7 +135,7 @@
         <div class="container grid grid--2-cols grid--center-v">
           <!-- PRIMERA ZONA 1 -->
           <div class="step-text-box">
-            <a class="zone" href="./pages/detail-zone.html">Zona 1</a>
+            <a class="zone" href="detail-zone-one.html">Zona 1</a>
             <h3 class="heading-tertiary">Explora este barrio</h3>
             <p class="step-description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
@@ -158,7 +154,7 @@
             <img />
           </div>
           <div class="step-text-box">
-            <p class="zone">Zona 2</p>
+            <a class="zone" href="detail-zone-two.html">Zona 2</a>
             <h3 class="heading-tertiary">Explora este barrio</h3>
             <p class="step-description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
@@ -170,7 +166,7 @@
 
           <!--  ZONA 3 -->
           <div class="step-text-box">
-            <p class="zone">Zona 3</p>
+            <a class="zone" href="detail-zone-three.html">Zona 3</a>
             <h3 class="heading-tertiary">Explora este barrio</h3>
             <p class="step-description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
@@ -189,7 +185,7 @@
             <img />
           </div>
           <div class="step-text-box">
-            <p class="zone">Zona 4</p>
+            <a class="zone" href="detail-zone-four.html">Zona 4</a>
             <h3 class="heading-tertiary">Explora este barrio</h3>
             <p class="step-description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
@@ -200,7 +196,7 @@
           </div>
           <!--  ZONA 5 -->
           <div class="step-text-box">
-            <p class="zone">Zona 5</p>
+            <a class="zone" href="detail-zone-five.html">Zona 5</a>
             <h3 class="heading-tertiary">Explora este barrio</h3>
             <p class="step-description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
@@ -257,11 +253,7 @@
                 <input type="number" /> -->
               </form>
             </div>
-            <div
-              class="cta-img-box"
-              role="img"
-              aria-label="Woman enjoying food"
-            ></div>
+            <div class="cta-img-box" role="img" aria-label=""></div>
           </div>
         </div>
       </section>
@@ -274,9 +266,13 @@
           FUERA DE RUTA
         </h1>
         <ul class="footer__nav">
-          <li class="main-nav-link footer__item">Inicio</li>
-          <li class="main-nav-link footer__item">Zonas</li>
-          <li class="main-nav-link footer__item">Contacto</li>
+          <a class="main-nav-link footer__item" href="../pages/index.html">
+            Inicio
+          </a>
+          <a class="main-nav-link footer__item" href="#zones-section">
+            Zonas
+          </a>
+          <a class="main-nav-link footer__item" href="#cta">Contacto</a>
         </ul>
 
         <p class="footer__copyright">&copy; Hecho con 💚 por Tech4Good8</p>
@@ -285,12 +281,12 @@
     <script src="script.js"></script>
     <script>
       async function exampleFetch() {
-const response = await fetch('https://reqres.in/api/users/2');
-const json = await response.json();
-console.log(json);
-}
+        const response = await fetch("https://reqres.in/api/users/2");
+        const json = await response.json();
+        console.log(json);
+      }
 
-exampleFetch()
-</script>
+      exampleFetch();
+    </script>
   </body>
 </html>

@@ -21,13 +21,13 @@ class SurveyController extends Controller
 
         $survey = Survey::create([
             'district_id' => $id,
-            'attribute1' => $request->atribute1,
-            'attribute2' => $request->atribute2,
-            'attribute3' => $request->atribute3,
-            'attribute4' => $request->atribute4
+            'attribute1' => $request->attribute1,
+            'attribute2' => $request->attribute2,
+            'attribute3' => $request->attribute3,
+            'attribute4' => $request->attribute4
         ]);
 
-        $district->total_average = $id->calculateRateTotal($district);
+        $district->total_average = $district->calculateRateTotal($district);
         $district->save();
 
         return response()->json(['message' => 'survey done!'],201);

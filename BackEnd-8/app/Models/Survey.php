@@ -9,6 +9,15 @@ class Survey extends Model
 {
     use HasFactory;
 
+    protected $fillable =[
+        'district_id',
+        'attribute1',
+        'attribute2',
+        'attribute3',
+        'attribute4'
+
+    ];
+
     public function district()
     {
         return $this->belongsTo(District::class);

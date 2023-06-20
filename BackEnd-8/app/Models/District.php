@@ -26,10 +26,10 @@ class District extends Model
 
     //get the values and the rate of every attribute
 
-    $attribute1Values = Survey::pluck('attribute1')->where('disctrict_id',$district->id)->toArray();
-    $attribute2Values = Survey::pluck('attribute2')->where('disctrict_id',$district->id)->toArray();
-    $attribute3Values = Survey::pluck('attribute3')->where('district_id',$district->id)->toArray();
-    $attribute4Values = Survey::pluck('attribute4')->where('district_id',$district->id)->toArray();
+    $attribute1Values = Survey::pluck('attribute1')->toArray();
+    $attribute2Values = Survey::pluck('attribute2')->toArray();
+    $attribute3Values = Survey::pluck('attribute3')->toArray();
+    $attribute4Values = Survey::pluck('attribute4')->toArray();
 
 
     //
@@ -40,7 +40,7 @@ class District extends Model
     $district->save();
 
 
-    $TotalRate= ($district->average_1+$district->average_2+$district->average_3+$district->average_4/4);
+    $TotalRate= ($district->average_1+$district->average_2+$district->average_3+$district->average_4)/4;
 
     return $TotalRate;
 
