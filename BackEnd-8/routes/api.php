@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use PHPUnit\Event\Test\PreConditionFinished;
-
+use App\Http\Controllers\Survey;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -15,12 +15,8 @@ use PHPUnit\Event\Test\PreConditionFinished;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::put('/players/{id}', [UserController::class, 'update'])->name('players.update');
-Route::get('/players/{id}/games', [DiceRollController::class, 'index'])->name('diceroll.index');
+Route::get('/players/{id}/games', [DiceRollController::class, 'index']);
 
 
 // Atributos barrios: 
