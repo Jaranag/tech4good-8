@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\DistrictController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use PHPUnit\Event\Test\PreConditionFinished;
-use App\Http\Controllers\Survey;
+use App\Http\Controllers\SurveyController;
+use App\Http\Controllers\ReviewController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -15,8 +17,12 @@ use App\Http\Controllers\Survey;
 |
 */
 
-Route::put('/players/{id}', [UserController::class, 'update'])->name('players.update');
-Route::get('/players/{id}/games', [DiceRollController::class, 'index']);
+Route::get('/district/{id}', [DistrictController::class, 'show']);
+Route::post('/district/{id}/survey', [SurveyController::class, 'create']);
+Route::post('/district/{id}/review', [ReviewController::class, 'create']);
+
+
+
 
 
 // Atributos barrios: 
