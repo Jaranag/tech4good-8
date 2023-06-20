@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->double('total_average');
-            $table->int('average_1');
-            $table->int('average_2');
-            $table->int('average_3');
-            $table->int('average_4');
+            $table->double('total_average')->default(0.00);
+            $table->integer('average_1')->default(0);
+            $table->integer('average_2')->default(0);
+            $table->integer('average_3')->default(0);
+            $table->integer('average_4')->default(0);
             $table->timestamps();
         });
     }
