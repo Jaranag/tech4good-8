@@ -17,7 +17,7 @@ class SurveyFactory extends Factory
     public function definition(): array
     {
         return [
-            'district_id' => 1,
+            'district_id' => rand(1,5),
             'attribute1' => rand(1,5),
             'attribute2' => rand(1,5),
             'attribute3' => rand(1,5),
