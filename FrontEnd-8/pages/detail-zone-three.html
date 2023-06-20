@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+
+    <!-- Always include this line of code!!! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../styles/styles-detailPage.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+
+    <title>Barcelona Fuera de Ruta</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" style="text-decoration: none; color: black">
+        <h1>
+          BARCELONA <br />
+          FUERA DE RUTA
+        </h1>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#home">Inicio</a></li>
+          <li>
+            <a class="main-nav-link" href="#zones">Zonas</a>
+          </li>
+          <li><a class="main-nav-link" href="#about-us">Sobre Nosotros</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <section class="section-hero">
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">Sant Andreu</h1>
+            <p class="hero-description">
+              Te ofrecemos diferentes opciones para que puedas descubrir las
+              <strong>joyas ocultas</strong> de Barcelona.
+            </p>
+
+            <a href="#how" class="btn btn--outline">Saber más &darr;</a>
+          </div>
+          <div class="hero-img-box">
+            <picture>
+              <img
+                src="./assets/img/hero-image-laberinto.jpg"
+                class="hero-img"
+                alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-meals" id="meals">
+        <div class="container center-text">
+          <h2 class="heading-secondary">Cultura de la zona</h2>
+        </div>
+
+        <div class="container grid grid--3-cols margin-bottom-md">
+          <div class="ocio">
+            <img
+              src="img/meals/meal-2.jpg"
+              class="meal-img"
+              alt="Avocado Salad"
+            />
+            <div class="ocio-content">
+              <p class="meal-title">Museo Prado</p>
+              <ul class="meal-attributes">
+                <li>
+                  <span class="hero-description"
+                    >Pequeño y encantador museo con arte encantador.</span
+                  >
+                </li>
+
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.8</strong> rating (441)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="ocio">
+            <img
+              src="img/meals/meal-2.jpg"
+              class="meal-img"
+              alt="Avocado Salad"
+            />
+            <div class="ocio-content">
+              <p class="meal-title">Bar La Lola</p>
+              <ul class="meal-attributes">
+                <li>
+                  <span class="hero-description"
+                    >Pequeño y encantador bar en que se come muy bien.</span
+                  >
+                </li>
+
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.8</strong> rating (441)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="ocio">
+            <img
+              src="img/meals/meal-2.jpg"
+              class="meal-img"
+              alt="Avocado Salad"
+            />
+            <div class="ocio-content">
+              <p class="meal-title">Bar La Lola</p>
+              <ul class="meal-attributes">
+                <li>
+                  <span class="hero-description"
+                    >Pequeño y encantador bar en que se come muy bien.</span
+                  >
+                </li>
+
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.8</strong> rating (441)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-meals" id="meals">
+        <div class="container center-text">
+          <h2 class="heading-secondary">Ocio de la zona</h2>
+        </div>
+
+        <div class="container grid grid--3-cols margin-bottom-md">
+          <div class="ocio">
+            <img
+              src="img/meals/meal-2.jpg"
+              class="meal-img"
+              alt="Avocado Salad"
+            />
+            <div class="ocio-content">
+              <p class="meal-title">Bar La Lola</p>
+              <ul class="meal-attributes">
+                <li>
+                  <span class="hero-description"
+                    >Pequeño y encantador bar en que se come muy bien.</span
+                  >
+                </li>
+
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.8</strong> rating (441)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="ocio">
+            <img
+              src="img/meals/meal-2.jpg"
+              class="meal-img"
+              alt="Avocado Salad"
+            />
+            <div class="ocio-content">
+              <p class="meal-title">Bar La Lola</p>
+              <ul class="meal-attributes">
+                <li>
+                  <span class="hero-description"
+                    >Pequeño y encantador bar en que se come muy bien.</span
+                  >
+                </li>
+
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.8</strong> rating (441)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="ocio">
+            <img
+              src="img/meals/meal-2.jpg"
+              class="meal-img"
+              alt="Avocado Salad"
+            />
+            <div class="ocio-content">
+              <p class="meal-title">Bar La Lola</p>
+              <ul class="meal-attributes">
+                <li>
+                  <span class="hero-description"
+                    >Pequeño y encantador bar en que se come muy bien.</span
+                  >
+                </li>
+
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.8</strong> rating (441)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container center-text">
+          <h2 class="heading-secondary">Valoraciones</h2>
+        </div>
+        <div class="rating-zone flex" style="gap: 5%">
+          <div style="font-size: 50px">
+            <p>Zonas verdes:</p>
+            <p>Ocio</p>
+            <p>Conectividad:</p>
+            <p>Tranquilidad:</p>
+          </div>
+
+          <div style="font-size: 50px">
+            <div style="gap: 2%">
+              <div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+              </div>
+
+              <div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+              </div>
+
+              <div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+              </div>
+
+              <div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-cta" id="cta">
+        <div class="container">
+          <div class="form-value">
+            <div class="cta-text-box">
+              <h2 class="heading-secondary">¿Te ha gustado la zona?</h2>
+              <p class="cta-text">
+                Valora para que otros puedan decidir si el barrio o la zona es
+                la ideal para su estancia en Barcelona.
+              </p>
+
+              <form class="cta-form" name="sign-up" netlify>
+                <div>
+                  <label for="name">Name</label>
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="John"
+                    name="name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="last-name">Last Name</label>
+                  <input
+                    id="last-name"
+                    type="text"
+                    placeholder="Smith"
+                    name="last-name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="green-zone"> Zonas verdes:</label>
+                  <select id="green-zone" name="green-zone" required>
+                    <option value="">Escoge tu opión:</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="conectividad"> Ocio:</label>
+                  <select id="ocio" name="ocio" required>
+                    <option value="">Escoge tu opión:</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="conectividad">Conectividad:</label>
+                  <select
+                    id="select-connection"
+                    name="select-connection"
+                    required
+                  >
+                    <option value="">Escoge tu opión:</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="conectividad">Tranquilidad:</label>
+                  <select
+                    id="select-connection"
+                    name="select-connection"
+                    required
+                  >
+                    <option value="">Escoge tu opión:</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+
+                <button class="btn btn--form">Envía</button>
+
+                <!-- <input type="checkbox" />
+                <input type="number" /> -->
+              </form>
+            </div>
+            <div
+              class="cta-img-box"
+              role="img"
+              aria-label="Woman enjoying food"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <h1 class="footer__logo">
+          BARCELONA <br />
+          FUERA DE RUTA
+        </h1>
+        <ul class="footer__nav">
+          <li class="main-nav-link footer__item">Inicio</li>
+          <li class="main-nav-link footer__item">Zonas</li>
+          <li class="main-nav-link footer__item">Contacto</li>
+        </ul>
+
+        <p class="footer__copyright">&copy; Hecho con 💚 por Tech4Good8</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
