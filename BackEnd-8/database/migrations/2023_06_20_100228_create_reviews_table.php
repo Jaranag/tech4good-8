@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->text('review_text');
             $table->string('name');
+            $table->string('last_name');
             $table->foreignId('district_id')->references('id')->on('districts');
             $table->timestamps();
         });
