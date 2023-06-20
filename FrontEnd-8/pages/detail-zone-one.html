@@ -53,12 +53,16 @@
 
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="../index.html">Inicio</a></li>
           <li>
-            <a class="main-nav-link" href="#zones-section">Zonas</a>
+            <a class="main-nav-link" href="../pages/index.html">Inicio</a>
           </li>
           <li>
-            <a class="main-nav-link" href="#cta">Contacta con nosotros</a>
+            <a class="main-nav-link" href="../pages/index.html">Zonas</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="../pages/index.html"
+              >Contacta con nosotros</a
+            >
           </li>
         </ul>
       </nav>
@@ -84,10 +88,9 @@
           <div class="hero-img-box">
             <picture>
               <img
-                id = img-fetch-prueba
+                id="img-fetch-prueba"
                 class="hero-img"
                 alt="Woman enjoying food, meals in storage container, and food bowls on a table"
-               
               />
             </picture>
           </div>
@@ -420,8 +423,8 @@
         let zona = document.querySelector("#nombre-zona");
         zona.textContent = json.data.id;
         //imagen
-        let img = document.querySelector('#img-fetch-prueba')
-        img.src=json.data.avatar;
+        let img = document.querySelector("#img-fetch-prueba");
+        img.src = json.data.avatar;
       }
 
       exampleFetch();
