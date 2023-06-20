@@ -77,8 +77,8 @@
       <section class="section-hero">
         <div class="hero">
           <div class="hero-text-box">
-            <h1 class="heading-primary">Sant Andreu</h1>
-            <p class="hero-description">
+            <h1 class="heading-primary" id="title-zone-two"></h1>
+            <p class="hero-description" id="description-zone-two">
               Te ofrecemos diferentes opciones para que puedas descubrir las
               <strong>joyas ocultas</strong> de Barcelona.
             </p>
@@ -87,11 +87,7 @@
           </div>
           <div class="hero-img-box">
             <picture>
-              <img
-                src="./assets/img/hero-image-laberinto.jpg"
-                class="hero-img"
-                alt="Woman enjoying food, meals in storage container, and food bowls on a table"
-              />
+              <img id="img-zone-two" class="hero-img" alt="zona 2" />
             </picture>
           </div>
         </div>
@@ -420,5 +416,24 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+      async function fetchDetailTwo() {
+        const response = await fetch("http://127.0.0.1:8000/api/district/2");
+        const district = await response.json();
+
+        //seleccionamos con id y añadimos info de data
+        //name
+        let title = document.querySelector("#title-zone-two");
+        zona.textContent = district.name;
+        //description
+        let description = document.querySelector("#description-zone-two");
+        zona.textContent = district.description;
+        //imagen
+        let img = document.querySelector("#img-zone-two");
+        img.src = district.img;
+      }
+
+      fetchDetailTwo();
+    </script>
   </body>
 </html>

@@ -135,79 +135,66 @@
         <div class="container grid grid--2-cols grid--center-v">
           <!-- PRIMERA ZONA 1 -->
           <div class="step-text-box">
-            <a class="zone" href="detail-zone-one.html">Zona 1</a>
+            <a class="zone" href="detail-zone-one.html" id="title-zone-one"></a>
             <h3 class="heading-tertiary">Explora este barrio</h3>
-            <p class="step-description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-              dolore laborum dignissimos, asperiores nihil dicta, odio iste esse
-              alias aperiam optio quas officiis, voluptas nulla sed nisi animi
-              possimus! Repellendus!
-            </p>
+            <p class="step-description" id="description-zone-one"></p>
           </div>
 
           <div class="step-img-box">
-            <img />
+            <img id="img-zone-one" />
           </div>
 
           <!--  ZONA 2 -->
           <div class="step-img-box">
-            <img />
+            <img id="img-zone-two" />
           </div>
           <div class="step-text-box">
-            <a class="zone" href="detail-zone-two.html">Zona 2</a>
+            <a class="zone" href="detail-zone-two.html" id="title-zone-two"></a>
             <h3 class="heading-tertiary">Explora este barrio</h3>
-            <p class="step-description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-              dolore laborum dignissimos, asperiores nihil dicta, odio iste esse
-              alias aperiam optio quas officiis, voluptas nulla sed nisi animi
-              possimus! Repellendus!
-            </p>
+            <p class="step-description" id="description-zone-two"></p>
           </div>
 
           <!--  ZONA 3 -->
           <div class="step-text-box">
-            <a class="zone" href="detail-zone-three.html">Zona 3</a>
+            <a
+              class="zone"
+              href="detail-zone-three.html"
+              id="title-zone-three"
+            ></a>
             <h3 class="heading-tertiary">Explora este barrio</h3>
-            <p class="step-description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-              dolore laborum dignissimos, asperiores nihil dicta, odio iste esse
-              alias aperiam optio quas officiis, voluptas nulla sed nisi animi
-              possimus! Repellendus!
-            </p>
+            <p class="step-description" id="description-zone-three"></p>
           </div>
 
           <div class="step-img-box">
-            <img />
+            <img id="img-zone-three" />
           </div>
 
           <!--  ZONA 4 -->
           <div class="step-img-box">
-            <img />
+            <img id="img-zone-four" />
           </div>
           <div class="step-text-box">
-            <a class="zone" href="detail-zone-four.html">Zona 4</a>
+            <a
+              class="zone"
+              href="detail-zone-four.html"
+              id="title-zone-four"
+            ></a>
             <h3 class="heading-tertiary">Explora este barrio</h3>
-            <p class="step-description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-              dolore laborum dignissimos, asperiores nihil dicta, odio iste esse
-              alias aperiam optio quas officiis, voluptas nulla sed nisi animi
-              possimus! Repellendus!
-            </p>
+            <p class="step-description" id="description-zone-four"></p>
           </div>
           <!--  ZONA 5 -->
           <div class="step-text-box">
-            <a class="zone" href="detail-zone-five.html">Zona 5</a>
+            <a
+              class="zone"
+              href="detail-zone-five.html"
+              id="title-zone-five"
+            ></a>
             <h3 class="heading-tertiary">Explora este barrio</h3>
-            <p class="step-description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-              dolore laborum dignissimos, asperiores nihil dicta, odio iste esse
-              alias aperiam optio quas officiis, voluptas nulla sed nisi animi
-              possimus! Repellendus!
-            </p>
+            <p class="step-description" id="description-zone-five"></p>
           </div>
 
           <div class="step-img-box">
-            <img />
+            <img id="img-zone-five" />
           </div>
         </div>
       </section>
@@ -280,19 +267,95 @@
     </footer>
     <script src="script.js"></script>
     <script>
-      async function exampleFetch() {
-        const response = await fetch("https://reqres.in/api/users/2");
-        const json = await response.json();
-        console.log(json);
+      async function fetchDetailOne() {
+        const response = await fetch("http://127.0.0.1:8000/api/district/1");
+        const district = await response.json();
+
         //seleccionamos con id y añadimos info de data
-        let zona = document.querySelector("#nombre-zona");
-        zona.textContent = json.data.id;
+        //name
+        let title = document.querySelector("#title-zone-one");
+        zona.textContent = district.name;
+        //description
+        let description = document.querySelector("#description-zone-one");
+        zona.textContent = district.description;
         //imagen
-        let img = document.querySelector("#img-fetch-prueba");
-        img.src = json.data.avatar;
+        let img = document.querySelector("#img-zone-one");
+        img.src = district.img;
       }
 
-      exampleFetch();
+      fetchDetailOne();
+
+      async function fetchDetailTwo() {
+        const response = await fetch("http://127.0.0.1:8000/api/district/2");
+        const district = await response.json();
+
+        //seleccionamos con id y añadimos info de data
+        //name
+        let title = document.querySelector("#title-zone-two");
+        zona.textContent = district.name;
+        //description
+        let description = document.querySelector("#description-zone-two");
+        zona.textContent = district.description;
+        //imagen
+        let img = document.querySelector("#img-zone-two");
+        img.src = district.img;
+      }
+
+      fetchDetailTwo();
+
+      async function fetchDetailThree() {
+        const response = await fetch("http://127.0.0.1:8000/api/district/3");
+        const district = await response.json();
+
+        //seleccionamos con id y añadimos info de data
+        //name
+        let title = document.querySelector("#title-zone-three");
+        zona.textContent = district.name;
+        //description
+        let description = document.querySelector("#description-zone-three");
+        zona.textContent = district.description;
+        //imagen
+        let img = document.querySelector("#img-zone-three");
+        img.src = district.img;
+      }
+
+      fetchDetailThree();
+
+      async function fetchDetailFour() {
+        const response = await fetch("http://127.0.0.1:8000/api/district/4");
+        const district = await response.json();
+
+        //seleccionamos con id y añadimos info de data
+        //name
+        let title = document.querySelector("#title-zone-four");
+        zona.textContent = district.name;
+        //description
+        let description = document.querySelector("#description-zone-four");
+        zona.textContent = district.description;
+        //imagen
+        let img = document.querySelector("#img-zone-four");
+        img.src = district.img;
+      }
+
+      fetchDetailFour();
+
+      async function fetchDetailFive() {
+        const response = await fetch("http://127.0.0.1:8000/api/district/5");
+        const district = await response.json();
+
+        //seleccionamos con id y añadimos info de data
+        //name
+        let title = document.querySelector("#title-zone-five");
+        zona.textContent = district.name;
+        //description
+        let description = document.querySelector("#description-zone-five");
+        zona.textContent = district.description;
+        //imagen
+        let img = document.querySelector("#img-zone-five");
+        img.src = district.img;
+      }
+
+      fetchDetailFive();
     </script>
   </body>
 </html>

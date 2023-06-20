@@ -77,21 +77,14 @@
       <section class="section-hero">
         <div class="hero">
           <div class="hero-text-box">
-            <h1 class="heading-primary">Sant Andreu</h1>
-            <p class="hero-description">
-              Te ofrecemos diferentes opciones para que puedas descubrir las
-              <strong>joyas ocultas</strong> de Barcelona.
-            </p>
+            <h1 class="heading-primary" id="title-zone-three"></h1>
+            <p class="hero-description" id="description-zone-three"></p>
 
             <a href="#how" class="btn btn--outline">Saber más &darr;</a>
           </div>
           <div class="hero-img-box">
             <picture>
-              <img
-                src="./assets/img/hero-image-laberinto.jpg"
-                class="hero-img"
-                alt="Woman enjoying food, meals in storage container, and food bowls on a table"
-              />
+              <img id="img-zone-three" class="hero-img" alt="zone 3" />
             </picture>
           </div>
         </div>
@@ -420,5 +413,24 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+      async function fetchDetailThree() {
+        const response = await fetch("http://127.0.0.1:8000/api/district/3");
+        const district = await response.json();
+
+        //seleccionamos con id y añadimos info de data
+        //name
+        let title = document.querySelector("#title-zone-three");
+        zona.textContent = district.name;
+        //description
+        let description = document.querySelector("#description-zone-three");
+        zona.textContent = district.description;
+        //imagen
+        let img = document.querySelector("#img-zone-three");
+        img.src = district.img;
+      }
+
+      fetchDetailThree();
+    </script>
   </body>
 </html>
