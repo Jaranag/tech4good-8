@@ -16,7 +16,10 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->double('total_average');
-            // $table->int
+            $table->int('average_1');
+            $table->int('average_2');
+            $table->int('average_3');
+            $table->int('average_4');
             $table->timestamps();
         });
     }
